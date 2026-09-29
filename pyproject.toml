@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project]
+name = "particletracker"
+version = "3.0.0"
+description = "Particle tracking GUI and batch processing tools."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "license.txt" }
+dependencies = [
+    "PyQt6==6.9.1",
+    "sphinx>=4.0",
+    "sphinx-autobuild>=2021.3.14",
+    "sphinx-rtd-theme>=1.2.0",
+    "qimage2ndarray",
+    "trackpy",
+    "moviepy>=2.0",
+    "slicerator",
+    "legacy-cgi",
+    "opencv-contrib-python",
+    "labvision @ git+https://github.com/MikeSmithLabTeam/labvision",
+    "numpy>=1.25",
+    "scipy",
+    "pandas",
+    "matplotlib",
+    "pexpect",
+    "tqdm",
+    "pillow",
+    "openpyxl",
+    "jupyterlab",
+    "tables",
+    "pyarrow>=24.0.0",
+]
+
+[project.scripts]
+particletracker = "particletracker.main:launch_gui"
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.6.0",
+    "pytest>=9.0.3",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".","src"]
+filterwarnings = ["ignore::pandas.io.pytables.PerformanceWarning"]
+    
+[tool.uv]
+package = false

@@ -1,0 +1,6 @@
+{
+  "python.venvFolders": ["C:/Users/Labuser/AppData/Local/uv_envs"],
+  "python.defaultInterpreterPath": "C:/Users/Labuser/AppData/Local/uv_envs/Project/Scripts/python.exe",
+  "python.terminal.activateEnvironment": true,
+  "terminal.integrated.defaultProfile.windows": "Command Prompt"
+}

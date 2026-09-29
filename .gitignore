@@ -1,0 +1,12 @@
+.venv/
+uv.lock
+
+*.parquet
+*.hdf5
+*.csv
+*.mp4
+*.png
+*.jpeg
+*.jpg
+*.tiff
+
